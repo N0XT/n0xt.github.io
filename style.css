@@ -1,0 +1,35 @@
+body {
+    background-color: #d2738a;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+#welcome {
+    background-color: #202020;
+    box-shadow: 1px 2px 3px #202020;
+    color: #d2738a;
+    margin: auto;
+    margin-top: 120px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#welcome img {
+}
+
+#title {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#subtitle {
+    display: block;
+    margin-top: 10px;
+}
+
+#sidenote {
+    display: block;
+    margin-top: 40px;
+    font-size: 10px;
+}
