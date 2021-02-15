@@ -1,4 +1,5 @@
 html {
+    scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
@@ -91,6 +92,7 @@ ul li {
     cursor: pointer;
     transition: text-shadow 0.2s ease-in-out;
     margin: 0px 10px;
+    color: #e84b71;
 }
 
 #welcome table td a:hover{
