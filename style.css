@@ -1,20 +1,71 @@
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    text-rendering: optimizeLegibility;
+    color: #cfcfcf;
+    background-color: #151515;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+
 body {
-    background-color: #d2738a;
+    background-color: #151515;
     font-family: 'Roboto Mono', sans-serif;
+    margin: 0;
+    margin-bottom: 20px;
+}
+ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+ul li {
+    margin: 10px 0px;
+}
+
+#home, #about, #files, #contact {
+    display: block;
+}
+
+#about, #files, #contact {
+    padding-top: 120px;
 }
 
 #welcome {
-    background-color: #202020;
-    box-shadow: 1px 2px 3px #202020;
-    color: #d2738a;
+    align-items: center;
+    justify-content: center; /* INTERNET EXPLORER */
+    justify-content: space-evenly;
+    color: #e84b71;
+    display: flex;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 11vh;
     padding-top: 20px;
     padding-bottom: 20px;
-    text-align: center;
+    max-width: 830px;
+    border: 1px solid #e84b71;
+    background-color: #252525;
+    box-shadow: 6px 6px 0px #e84b7120;
 }
 
-#welcome img {
+#lain-container {
+    width: 215px;
+    overflow: hidden;
+}
+
+#lain-container img {
+    display: block;
+    margin-left: -105px;
 }
 
 #title {
@@ -28,8 +79,169 @@ body {
     margin-top: 10px;
 }
 
+#welcome table {
+    color: #e84b71;
+    text-decoration: underline;
+    border-collapse: collapse;
+    margin-top: 60px;
+    margin-left: -10px;
+}
+
+#welcome table td a {
+    cursor: pointer;
+    transition: text-shadow 0.2s ease-in-out;
+    margin: 0px 10px;
+}
+
+#welcome table td a:hover{
+    text-shadow: 0px 0px 2px #e84b71;
+}
+
 #sidenote {
     display: block;
-    margin-top: 40px;
+    margin-top: 10px;
     font-size: 10px;
 }
+
+#about .container .text span {
+    float: right;
+}
+
+.container {
+    color: #e84b71;
+    margin: auto;
+    margin-top: 120px;
+    padding: 20px;
+    max-width: 800px;
+    border: 1px solid #e84b71;
+    background-color: #303030;
+    box-shadow: 6px 6px 0px #e84b7120;
+}
+
+#about .container::before {
+    content: "WHO AM I?";
+    font-size: 24px;
+    display: block;
+    background-color: #303030;
+    position: absolute;
+    margin-top: -90px;
+    margin-left: -21px;
+    border: 1px solid #e84b71;
+    box-shadow: 6px 6px 0px #e84b7120;
+    padding: 10px 20px;
+}
+
+.text {
+    display: block;
+    margin: 0;
+}
+
+.text .parenthesis {
+    color: #e2a4b4;
+    font-style: italic;
+}
+
+.text .hidden {
+    background-color: #151515;
+    color: #151515;
+}
+
+.text .hidden:hover {
+    background-color: #ececec;
+    color: #662233;
+}
+
+#about .text {
+    padding-bottom: 20px;
+}
+
+#files .container::before {
+    content: "FILES";
+    font-size: 24px;
+    display: block;
+    background-color: #303030;
+    position: absolute;
+    margin-top: -90px;
+    margin-left: -21px;
+    border: 1px solid #e84b71;
+    box-shadow: 6px 6px 0px #e84b7120;
+    padding: 10px 20px;
+}
+
+.list a {
+    text-decoration: none;
+    color: #e84b71;
+    transition: text-shadow 0.2s ease-in-out;
+}
+
+.list a:hover{
+    text-shadow: 0px 0px 2px #e84b71;
+}
+
+#contact .container::before {
+    content: "CONTACT ME";
+    font-size: 24px;
+    display: block;
+    background-color: #303030;
+    position: absolute;
+    margin-top: -90px;
+    margin-left: -21px;
+    border: 1px solid #e84b71;
+    box-shadow: 6px 6px 0px #e84b7120;
+    padding: 10px 20px;
+}
+
+#contact img {
+    float: right;
+}
+
+@media screen and (max-width: 888px){
+    #welcome, .container {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #welcome {
+        display: block;
+    }
+
+    #lain-container {
+        margin: auto;
+    }
+
+    #welcome-container {
+        text-align: center;
+    }
+
+    #title {
+        padding: 0px 10px;
+    }
+
+    #welcome-container table {
+        margin: auto;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    #welcome table td a {
+        margin: 0px 5px;
+    }
+
+    #sidenote {
+        padding: 0px 5px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    #welcome td {
+        display: block;
+        text-align: center;
+        padding: 5px 0px;
+    }
+
+}
+
+
