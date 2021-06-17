@@ -11,7 +11,11 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-NYXNLQCSBG');
+        gtag('config', 'G-NYXNLQCSBG', {
+            'cookie_prefix': 'Asuka',
+            'cookie_flags': 'SameSite=None;Secure',
+            'cookie_expires': 28 * 24 * 60 * 60 
+        });
     </script>
 </head>
 <body style="background-color: #202020">
